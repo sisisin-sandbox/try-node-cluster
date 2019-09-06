@@ -15,5 +15,8 @@
     "morgan": "~1.9.1",
     "pm2": "^3.5.1",
     "sleep": "^6.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.6.2"
   }
 }
