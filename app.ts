@@ -1,4 +1,7 @@
-require('heapdump')
+import tracer from 'dd-trace';
+tracer.init({ analytics: true });
+
+require('heapdump');
 const io = require('@pm2/io');
 var createError = require('http-errors');
 var express = require('express');

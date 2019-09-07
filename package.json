@@ -8,6 +8,7 @@
   "dependencies": {
     "@pm2/io": "^4.2.6",
     "cookie-parser": "~1.4.4",
+    "dd-trace": "^0.15.0",
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "heapdump": "^0.3.14",
