@@ -9,6 +9,13 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+import redis from 'redis';
+const redisUrl = '';
+const redisClient = redis.createClient({ host: '127.0.0.1', port: 6379 });
+redisClient.set('hoge', 'fuga');
+
+
+
 module.exports.meter = io.meter({ name: 'req/min', samples: 1, timeframe: 60 });
 
 var indexRouter = require('./routes/index');

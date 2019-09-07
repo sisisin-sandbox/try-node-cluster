@@ -1,3 +1,10 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const dd_trace_1 = __importDefault(require("dd-trace"));
+dd_trace_1.default.init({ analytics: true });
 require('heapdump');
 const io = require('@pm2/io');
 var createError = require('http-errors');
@@ -5,6 +12,10 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const redis_1 = __importDefault(require("redis"));
+const redisUrl = '';
+const redisClient = redis_1.default.createClient({ host: '127.0.0.1', port: 6379 });
+redisClient.set('hoge', 'fuga');
 module.exports.meter = io.meter({ name: 'req/min', samples: 1, timeframe: 60 });
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');

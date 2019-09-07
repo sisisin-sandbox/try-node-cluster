@@ -16,9 +16,11 @@
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
     "pm2": "^3.5.1",
+    "redis": "^2.8.0",
     "sleep": "^6.1.0"
   },
   "devDependencies": {
+    "@types/redis": "^2.8.13",
     "typescript": "^3.6.2"
   }
 }
