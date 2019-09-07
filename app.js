@@ -1,3 +1,4 @@
+require('heapdump');
 const io = require('@pm2/io');
 var createError = require('http-errors');
 var express = require('express');
